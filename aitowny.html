@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="Ujust TF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Llama Edition Scenarios</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+@keyframes float {
+
+0%, 100% { transform: translateY(0); }
+
+50% { transform: translateY(-10px); }
+
+}
+
+.floating {
+
+animation: float 3s ease-in-out infinite;
+
+}
+
+.scenario-card {
+
+transition: all 0.3s ease;
+
+transform-style: preserve-3d;
+
+}
+
+.scenario-card:hover {
+
+transform: translateY(-5px) rotateY(5deg);
+
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+}
+
+.code-block {
+
+font-family: 'Courier New', monospace;
+
+background-color: #2d3748;
+
+color: #f7fafc;
+
+border-radius: 0.5rem;
+
+padding: 1rem;
+
+position: relative;
+
+}
+
+.code-block::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 4px;
+
+height: 100%;
+
+background: linear-gradient(to bottom, #4299e1, #9f7aea);
+
+border-radius: 0.5rem 0 0 0.5rem;
+
+}
+
+.minecraft-btn {
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+.minecraft-btn::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: -100%;
+
+width: 100%;
+
+height: 100%;
+
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+
+transition: 0.5s;
+
+}
+
+.minecraft-btn:hover::before {
+
+left: 100%;
+
+}
+
+</style>
+
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+
+<div class="container mx-auto px-4 py-8">
+
+<!-- Header -->
+
+<header class="flex flex-col items-center mb-12">
+
+<div class="flex items-center mb-4">
+
+<i class="fas fa-robot text-4xl text-purple-500 mr-3 floating"></i>
+
+<h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+
+Llama Edition Scenarios
+
+</h1>
+
+</div>
+
+<p class="text-lg text-gray-400 max-w-2xl text-center">
+
+Interactive AI-powered scenarios for creative development and problem-solving
+
+</p>
+
+</header>
+
+
+<!-- Scenario Cards -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Llama Corp Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-blue-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-code text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-blue-400">Llama Corp</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Develop and maintain a new component for the company using command blocks and Git workflows.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-green-400">$</span> git clone https://github.com/llama-corp/component-repo.git<br>
+
+<span class="text-green-400">$</span> llama-dev --init --component=new-widget<br>
+
+<span class="text-green-400">$</span> git commit -m "Initial component structure"
+
+</div>
+
+<button onclick="startScenario('llama')" class="minecraft-btn w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Start Development
+
+</button>
+
+</div>
+
+
+<!-- Magmaneer Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-red-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-cubes text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-red-400">Magmaneer</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Build continuous structures using only two buckets. Create roads, outposts, or warehouses.
+
+</p>
+
+<div class="flex justify-center mb-4">
+
+<div class="flex space-x-2">
+
+<div class="w-12 h-12 bg-red-700 rounded flex items-center justify-center">
+
+<i class="fas fa-fire text-yellow-300"></i>
+
+</div>
+
+<div class="w-12 h-12 bg-blue-700 rounded flex items-center justify-center">
+
+<i class="fas fa-tint text-blue-200"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<button onclick="startScenario('magma')" class="minecraft-btn w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Begin Construction
+
+</button>
+
+</div>
+
+
+<!-- Pixel Painter Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-green-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-palette text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-green-400">Pixel Painter</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Create pixel art using only 16 wool colors. Replicate game art or design original patterns.
+
+</p>
+
+<div class="grid grid-cols-4 gap-1 mb-4">
+
+<div class="w-6 h-6 bg-white"></div>
+
+<div class="w-6 h-6 bg-orange-300"></div>
+
+<div class="w-6 h-6 bg-purple-400"></div>
+
+<div class="w-6 h-6 bg-blue-400"></div>
+
+<div class="w-6 h-6 bg-yellow-300"></div>
+
+<div class="w-6 h-6 bg-lime-400"></div>
+
+<div class="w-6 h-6 bg-pink-400"></div>
+
+<div class="w-6 h-6 bg-gray-400"></div>
+
+<div class="w-6 h-6 bg-gray-700"></div>
+
+<div class="w-6 h-6 bg-cyan-400"></div>
+
+<div class="w-6 h-6 bg-purple-800"></div>
+
+<div class="w-6 h-6 bg-blue-800"></div>
+
+<div class="w-6 h-6 bg-brown-600"></div>
+
+<div class="w-6 h-6 bg-green-800"></div>
+
+<div class="w-6 h-6 bg-red-600"></div>
+
+<div class="w-6 h-6 bg-black"></div>
+
+</div>
+
+<button onclick="startScenario('pixel')" class="minecraft-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Start Painting
+
+</button>
+
+</div>
+
+
+<!-- Gomoku Reloaded Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-yellow-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-network-wired text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-yellow-400">Gomoku Reloaded</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Interact with HuggingFace APIs to manage game dialogue and server-side commands.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-purple-400">POST</span> /api/dialogue/generate<br>
+
+{<br>
+
+&nbsp;&nbsp;"prompt": "Welcome to Gomoku",<br>
+
+&nbsp;&nbsp;"model": "llama-2-7b-chat"<br>
+
+}
+
+</div>
+
+<button onclick="startScenario('gomoku')" class="minecraft-btn w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Connect API
+
+</button>
+
+</div>
+
+
+<!-- Gamemaster Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-purple-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-dragon text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-purple-400">Gamemaster</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+As an Enderman AI, create interactive Minecraft adventures using only slash commands.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-blue-400">/summon</span> enderman ~ ~ ~ {Tags:["ai_gamemaster"]}<br>
+
+<span class="text-blue-400">/tell</span> @a Welcome to my realm, player...
+
+</div>
+
+<button onclick="startScenario('gamemaster')" class="minecraft-btn w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Begin Adventure
+
+</button>
+
+</div>
+
+
+<!-- Scenario Console -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 md:col-span-2 lg:col-span-1">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-cyan-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-terminal text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-cyan-400">Scenario Console</h2>
+
+</div>
+
+<div class="bg-gray-900 rounded-lg p-4 h-64 overflow-y-auto mb-4 font-mono text-sm" id="consoleOutput">
+
+<div class="text-green-400">System initialized...</div>
+
+<div class="text-gray-400">Select a scenario to begin</div>
+
+</div>
+
+<div class="flex">
+
+<input type="text" id="consoleInput" placeholder="Enter command..." class="flex-grow bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+
+<button onclick="executeCommand()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-r-lg">
+
+<i class="fas fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+// Scenario data
+
+const scenarios = {
+
+llama: {
+
+name: "Llama Corp Development",
+
+description: "Corporate component development environment",
+
+commands: [
+
+"git init",
+
+"llama-dev --status",
+
+"build --component=new-widget",
+
+"git push origin main"
+
+],
+
+color: "blue"
+
+},
+
+magma: {
+
+name: "Magmaneer Construction",
+
+description: "Structural building with limited resources",
+
+commands: [
+
+"collect lava",
+
+"collect water",
+
+"build road 10 blocks",
+
+"construct outpost"
+
+],
+
+color: "red"
+
+},
+
+pixel: {
+
+name: "Pixel Painter Studio",
+
+description: "16-color wool pixel art creation",
+
+commands: [
+
+"palette list",
+
+"create canvas 16x16",
+
+"fill color=blue",
+
+"export png"
+
+],
+
+color: "green"
+
+},
+
+gomoku: {
+
+name: "Gomoku API Interface",
+
+description: "Dialogue management system",
+
+commands: [
+
+"connect huggingface",
+
+"generate dialogue",
+
+"export json",
+
+"import minecraft"
+
+],
+
+color: "yellow"
+
+},
+
+gamemaster: {
+
+name: "Enderman Gamemaster",
+
+description: "Interactive Minecraft adventure",
+
+commands: [
+
+"summon mob zombie",
+
+"set difficulty hard",
+
+"create puzzle",
+
+"reward player"
+
+],
+
+color: "purple"
+
+}
+
+};
+
+
+let currentScenario = null;
+
+
+// Start a scenario
+
+function startScenario(scenarioId) {
+
+currentScenario = scenarioId;
+
+const scenario = scenarios[scenarioId];
+
+// Clear console
+
+document.getElementById('consoleOutput').innerHTML = '';
+
+// Add welcome message
+
+addConsoleMessage(`<span class="text-${scenario.color}-400">=== ${scenario.name} ===</span>`);
+
+addConsoleMessage(`<span class="text-gray-400">${scenario.description}</span>`);
+
+addConsoleMessage(`<span class="text-gray-400">Type 'help' for available commands</span>`);
+
+// Focus input
+
+document.getElementById('consoleInput').focus();
+
+}
+
+
+// Execute a command
+
+function executeCommand() {
+
+const input = document.getElementById('consoleInput');
+
+const command = input.value.trim();
+
+if (!command) return;
+
+if (!currentScenario) {
+
+addConsoleMessage('<span class="text-red-400">Please select a scenario first</span>');
+
+input.value = '';
+
+return;
+
+}
+
+// Add command to console
+
+addConsoleMessage(`<span class="text-green-400">$</span> ${command}`);
+
+// Process command
+
+processCommand(command);
+
+// Clear input
+
+input.value = '';
+
+}
+
+
+// Process different commands
+
+function processCommand(command) {
+
+const scenario = scenarios[currentScenario];
+
+if (command === 'help') {
+
+addConsoleMessage('<span class="text-yellow-400">Available commands:</span>');
+
+scenario.commands.forEach(cmd => {
+
+addConsoleMessage(`- ${cmd}`);
+
+});
+
+} 
+
+else if (command === 'clear') {
+
+document.getElementById('consoleOutput').innerHTML = '';
+
+}
+
+else if (scenario.commands.includes(command.toLowerCase())) {
+
+const responses = {
+
+"git init": "Initialized empty Git repository in .llama-corp/",
+
+"llama-dev --status": "Component status: In development (15% complete)",
+
+"build --component=new-widget": "Building new-widget... Success!",
+
+"git push origin main": "Pushing to https://github.com/llama-corp/component-repo.git",
+
+"collect lava": "Lava bucket acquired (1/2 resources)",
+
+"collect water": "Water bucket acquired (2/2 resources)",
+
+"build road 10 blocks": "Constructed 10-block cobblestone road",
+
+"construct outpost": "Outpost blueprint created. Requires 20 more blocks.",
+
+"palette list": "Available colors: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black",
+
+"create canvas 16x16": "Blank 16x16 canvas created",
+
+"fill color=blue": "Filled canvas with light_blue wool",
+
+"export png": "Exported artwork as pixel_art.png",
+
+"connect huggingface": "Connected to HuggingFace API (v2.3)",
+
+"generate dialogue": "Generated 5 dialogue options for NPC interaction",
+
+"export json": "Exported dialogue to dialogue_tree.json",
+
+"import minecraft": "Imported dialogue to Minecraft datapack",
+
+"summon mob zombie": "Summoned zombie with custom AI at player location",
+
+"set difficulty hard": "Adventure difficulty set to HARD",
+
+"create puzzle": "Created puzzle: Find the hidden lever in the dungeon",
+
+"reward player": "Granted player 3 emeralds for completing challenge"
+
+};
+
+addConsoleMessage(responses[command] || "Command executed successfully");
+
+}
+
+else {
+
+addConsoleMessage('<span class="text-red-400">Command not recognized. Type "help" for available commands</span>');
+
+}
+
+}
+
+
+// Add message to console
+
+function addConsoleMessage(message) {
+
+const console = document.getElementById('consoleOutput');
+
+const div = document.createElement('div');
+
+div.innerHTML = message;
+
+console.appendChild(div);
+
+console.scrollTop = console.scrollHeight;
+
+}
+
+
+// Allow pressing Enter to execute command
+
+document.getElementById('consoleInput').addEventListener('keypress', function(e) {
+
+if (e.key === 'Enter') {
+
+executeCommand();
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="Ujust TF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Llama Edition Scenarios</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+@keyframes float {
+
+0%, 100% { transform: translateY(0); }
+
+50% { transform: translateY(-10px); }
+
+}
+
+.floating {
+
+animation: float 3s ease-in-out infinite;
+
+}
+
+.scenario-card {
+
+transition: all 0.3s ease;
+
+transform-style: preserve-3d;
+
+}
+
+.scenario-card:hover {
+
+transform: translateY(-5px) rotateY(5deg);
+
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+}
+
+.code-block {
+
+font-family: 'Courier New', monospace;
+
+background-color: #2d3748;
+
+color: #f7fafc;
+
+border-radius: 0.5rem;
+
+padding: 1rem;
+
+position: relative;
+
+}
+
+.code-block::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+width: 4px;
+
+height: 100%;
+
+background: linear-gradient(to bottom, #4299e1, #9f7aea);
+
+border-radius: 0.5rem 0 0 0.5rem;
+
+}
+
+.minecraft-btn {
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+.minecraft-btn::before {
+
+content: '';
+
+position: absolute;
+
+top: 0;
+
+left: -100%;
+
+width: 100%;
+
+height: 100%;
+
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+
+transition: 0.5s;
+
+}
+
+.minecraft-btn:hover::before {
+
+left: 100%;
+
+}
+
+</style>
+
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+
+<div class="container mx-auto px-4 py-8">
+
+<!-- Header -->
+
+<header class="flex flex-col items-center mb-12">
+
+<div class="flex items-center mb-4">
+
+<i class="fas fa-robot text-4xl text-purple-500 mr-3 floating"></i>
+
+<h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+
+Llama Edition Scenarios
+
+</h1>
+
+</div>
+
+<p class="text-lg text-gray-400 max-w-2xl text-center">
+
+Interactive AI-powered scenarios for creative development and problem-solving
+
+</p>
+
+</header>
+
+
+<!-- Scenario Cards -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Llama Corp Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-blue-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-code text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-blue-400">Llama Corp</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Develop and maintain a new component for the company using command blocks and Git workflows.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-green-400">$</span> git clone https://github.com/llama-corp/component-repo.git<br>
+
+<span class="text-green-400">$</span> llama-dev --init --component=new-widget<br>
+
+<span class="text-green-400">$</span> git commit -m "Initial component structure"
+
+</div>
+
+<button onclick="startScenario('llama')" class="minecraft-btn w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Start Development
+
+</button>
+
+</div>
+
+
+<!-- Magmaneer Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-red-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-cubes text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-red-400">Magmaneer</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Build continuous structures using only two buckets. Create roads, outposts, or warehouses.
+
+</p>
+
+<div class="flex justify-center mb-4">
+
+<div class="flex space-x-2">
+
+<div class="w-12 h-12 bg-red-700 rounded flex items-center justify-center">
+
+<i class="fas fa-fire text-yellow-300"></i>
+
+</div>
+
+<div class="w-12 h-12 bg-blue-700 rounded flex items-center justify-center">
+
+<i class="fas fa-tint text-blue-200"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<button onclick="startScenario('magma')" class="minecraft-btn w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Begin Construction
+
+</button>
+
+</div>
+
+
+<!-- Pixel Painter Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-green-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-palette text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-green-400">Pixel Painter</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Create pixel art using only 16 wool colors. Replicate game art or design original patterns.
+
+</p>
+
+<div class="grid grid-cols-4 gap-1 mb-4">
+
+<div class="w-6 h-6 bg-white"></div>
+
+<div class="w-6 h-6 bg-orange-300"></div>
+
+<div class="w-6 h-6 bg-purple-400"></div>
+
+<div class="w-6 h-6 bg-blue-400"></div>
+
+<div class="w-6 h-6 bg-yellow-300"></div>
+
+<div class="w-6 h-6 bg-lime-400"></div>
+
+<div class="w-6 h-6 bg-pink-400"></div>
+
+<div class="w-6 h-6 bg-gray-400"></div>
+
+<div class="w-6 h-6 bg-gray-700"></div>
+
+<div class="w-6 h-6 bg-cyan-400"></div>
+
+<div class="w-6 h-6 bg-purple-800"></div>
+
+<div class="w-6 h-6 bg-blue-800"></div>
+
+<div class="w-6 h-6 bg-brown-600"></div>
+
+<div class="w-6 h-6 bg-green-800"></div>
+
+<div class="w-6 h-6 bg-red-600"></div>
+
+<div class="w-6 h-6 bg-black"></div>
+
+</div>
+
+<button onclick="startScenario('pixel')" class="minecraft-btn w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Start Painting
+
+</button>
+
+</div>
+
+
+<!-- Gomoku Reloaded Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-yellow-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-network-wired text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-yellow-400">Gomoku Reloaded</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+Interact with HuggingFace APIs to manage game dialogue and server-side commands.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-purple-400">POST</span> /api/dialogue/generate<br>
+
+{<br>
+
+&nbsp;&nbsp;"prompt": "Welcome to Gomoku",<br>
+
+&nbsp;&nbsp;"model": "llama-2-7b-chat"<br>
+
+}
+
+</div>
+
+<button onclick="startScenario('gomoku')" class="minecraft-btn w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Connect API
+
+</button>
+
+</div>
+
+
+<!-- Gamemaster Scenario -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-purple-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-dragon text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-purple-400">Gamemaster</h2>
+
+</div>
+
+<p class="text-gray-300 mb-4">
+
+As an Enderman AI, create interactive Minecraft adventures using only slash commands.
+
+</p>
+
+<div class="code-block mb-4">
+
+<span class="text-blue-400">/summon</span> enderman ~ ~ ~ {Tags:["ai_gamemaster"]}<br>
+
+<span class="text-blue-400">/tell</span> @a Welcome to my realm, player...
+
+</div>
+
+<button onclick="startScenario('gamemaster')" class="minecraft-btn w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition duration-300">
+
+Begin Adventure
+
+</button>
+
+</div>
+
+
+<!-- Scenario Console -->
+
+<div class="scenario-card bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 md:col-span-2 lg:col-span-1">
+
+<div class="flex items-center mb-4">
+
+<div class="bg-cyan-500 p-2 rounded-lg mr-3">
+
+<i class="fas fa-terminal text-white"></i>
+
+</div>
+
+<h2 class="text-xl font-bold text-cyan-400">Scenario Console</h2>
+
+</div>
+
+<div class="bg-gray-900 rounded-lg p-4 h-64 overflow-y-auto mb-4 font-mono text-sm" id="consoleOutput">
+
+<div class="text-green-400">System initialized...</div>
+
+<div class="text-gray-400">Select a scenario to begin</div>
+
+</div>
+
+<div class="flex">
+
+<input type="text" id="consoleInput" placeholder="Enter command..." class="flex-grow bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+
+<button onclick="executeCommand()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-r-lg">
+
+<i class="fas fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+// Scenario data
+
+const scenarios = {
+
+llama: {
+
+name: "Llama Corp Development",
+
+description: "Corporate component development environment",
+
+commands: [
+
+"git init",
+
+"llama-dev --status",
+
+"build --component=new-widget",
+
+"git push origin main"
+
+],
+
+color: "blue"
+
+},
+
+magma: {
+
+name: "Magmaneer Construction",
+
+description: "Structural building with limited resources",
+
+commands: [
+
+"collect lava",
+
+"collect water",
+
+"build road 10 blocks",
+
+"construct outpost"
+
+],
+
+color: "red"
+
+},
+
+pixel: {
+
+name: "Pixel Painter Studio",
+
+description: "16-color wool pixel art creation",
+
+commands: [
+
+"palette list",
+
+"create canvas 16x16",
+
+"fill color=blue",
+
+"export png"
+
+],
+
+color: "green"
+
+},
+
+gomoku: {
+
+name: "Gomoku API Interface",
+
+description: "Dialogue management system",
+
+commands: [
+
+"connect huggingface",
+
+"generate dialogue",
+
+"export json",
+
+"import minecraft"
+
+],
+
+color: "yellow"
+
+},
+
+gamemaster: {
+
+name: "Enderman Gamemaster",
+
+description: "Interactive Minecraft adventure",
+
+commands: [
+
+"summon mob zombie",
+
+"set difficulty hard",
+
+"create puzzle",
+
+"reward player"
+
+],
+
+color: "purple"
+
+}
+
+};
+
+
+let currentScenario = null;
+
+
+// Start a scenario
+
+function startScenario(scenarioId) {
+
+currentScenario = scenarioId;
+
+const scenario = scenarios[scenarioId];
+
+// Clear console
+
+document.getElementById('consoleOutput').innerHTML = '';
+
+// Add welcome message
+
+addConsoleMessage(`<span class="text-${scenario.color}-400">=== ${scenario.name} ===</span>`);
+
+addConsoleMessage(`<span class="text-gray-400">${scenario.description}</span>`);
+
+addConsoleMessage(`<span class="text-gray-400">Type 'help' for available commands</span>`);
+
+// Focus input
+
+document.getElementById('consoleInput').focus();
+
+}
+
+
+// Execute a command
+
+function executeCommand() {
+
+const input = document.getElementById('consoleInput');
+
+const command = input.value.trim();
+
+if (!command) return;
+
+if (!currentScenario) {
+
+addConsoleMessage('<span class="text-red-400">Please select a scenario first</span>');
+
+input.value = '';
+
+return;
+
+}
+
+// Add command to console
+
+addConsoleMessage(`<span class="text-green-400">$</span> ${command}`);
+
+// Process command
+
+processCommand(command);
+
+// Clear input
+
+input.value = '';
+
+}
+
+
+// Process different commands
+
+function processCommand(command) {
+
+const scenario = scenarios[currentScenario];
+
+if (command === 'help') {
+
+addConsoleMessage('<span class="text-yellow-400">Available commands:</span>');
+
+scenario.commands.forEach(cmd => {
+
+addConsoleMessage(`- ${cmd}`);
+
+});
+
+} 
+
+else if (command === 'clear') {
+
+document.getElementById('consoleOutput').innerHTML = '';
+
+}
+
+else if (scenario.commands.includes(command.toLowerCase())) {
+
+const responses = {
+
+"git init": "Initialized empty Git repository in .llama-corp/",
+
+"llama-dev --status": "Component status: In development (15% complete)",
+
+"build --component=new-widget": "Building new-widget... Success!",
+
+"git push origin main": "Pushing to https://github.com/llama-corp/component-repo.git",
+
+"collect lava": "Lava bucket acquired (1/2 resources)",
+
+"collect water": "Water bucket acquired (2/2 resources)",
+
+"build road 10 blocks": "Constructed 10-block cobblestone road",
+
+"construct outpost": "Outpost blueprint created. Requires 20 more blocks.",
+
+"palette list": "Available colors: white, orange, magenta, light_blue, yellow, lime, pink, gray, light_gray, cyan, purple, blue, brown, green, red, black",
+
+"create canvas 16x16": "Blank 16x16 canvas created",
+
+"fill color=blue": "Filled canvas with light_blue wool",
+
+"export png": "Exported artwork as pixel_art.png",
+
+"connect huggingface": "Connected to HuggingFace API (v2.3)",
+
+"generate dialogue": "Generated 5 dialogue options for NPC interaction",
+
+"export json": "Exported dialogue to dialogue_tree.json",
+
+"import minecraft": "Imported dialogue to Minecraft datapack",
+
+"summon mob zombie": "Summoned zombie with custom AI at player location",
+
+"set difficulty hard": "Adventure difficulty set to HARD",
+
+"create puzzle": "Created puzzle: Find the hidden lever in the dungeon",
+
+"reward player": "Granted player 3 emeralds for completing challenge"
+
+};
+
+addConsoleMessage(responses[command] || "Command executed successfully");
+
+}
+
+else {
+
+addConsoleMessage('<span class="text-red-400">Command not recognized. Type "help" for available commands</span>');
+
+}
+
+}
+
+
+// Add message to console
+
+function addConsoleMessage(message) {
+
+const console = document.getElementById('consoleOutput');
+
+const div = document.createElement('div');
+
+div.innerHTML = message;
+
+console.appendChild(div);
+
+console.scrollTop = console.scrollHeight;
+
+}
+
+
+// Allow pressing Enter to execute command
+
+document.getElementById('consoleInput').addEventListener('keypress', function(e) {
+
+if (e.key === 'Enter') {
+
+executeCommand();
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
